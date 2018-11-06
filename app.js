@@ -7,7 +7,7 @@ app.get('/', function(req, res) {
 });
 
 // Routes
-app.get('/name', function(req, res) {
+app.get('/fullname', function(req, res) {
   res.send('Eli');
 });
 
