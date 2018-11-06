@@ -6,6 +6,11 @@ app.get('/', function(req, res) {
   res.send('OK');
 });
 
+// Routes
+app.get('/name', function(req, res) {
+  res.send('Eli');
+});
+
 // Listen
 var port = process.env.PORT || 3000;
 app.listen(port);
