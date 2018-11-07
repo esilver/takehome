@@ -18,7 +18,7 @@ app.get('/', function(req, res) {
     
   }
   if (req.query.q == "Ping"){
-    res.send('9179249076');
+    res.send('OK');
   }
 });
 
