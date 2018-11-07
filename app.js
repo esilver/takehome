@@ -3,24 +3,18 @@ var app = express();
 
 // Routes
 app.get('/', function(req, res) {
-  res.type('text');   
 
-  if (req.query.q == "Phone"){
-    res.send('9179249076');
+  switch(req.query.q) {
+    case "Phone":
+      res.send('9179249076');
+    case "Puzzle":
+      {
+        let puzzle = req.query.d.split('\n');
+        res.send(solution(puzzle));
+      }
+    default:
+      res.send('OK');
   }
-  if (req.query.q == "Puzzle"){
-    let puzzle = req.query.d.split('\n');
-   
-
-  
-
-    res.send(solution(puzzle));
-    
-  }
-  if (req.query.q == "Ping"){
-    res.send('OK');
-  }
-  res.send('OK');
 });
 
 
@@ -39,8 +33,7 @@ function solution(puzzle) {
   let d = getValueAndPosition(puzzle[5]);
   
   let arr = [a, b, c, d];
-  let equalIndex = findEqualIndex(arr)
-
+  let equalIndex = findEqualIndex(arr);
 
   let solution = " ABCD\n"
   + 'A' + solutionValue(0, arr, equalIndex) + '\n'
