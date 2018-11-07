@@ -5,8 +5,26 @@ var app = express();
 app.get('/', function(req, res) {
 
   switch(req.query.q) {
+    case "Name":
+      res.send('Eli Silver');
+    case "Email Address":
+    res.send('esilver17@gmail.com');
     case "Phone":
       res.send('9179249076');
+    case "Position":
+      res.send("Fullstack engineer");
+    case "Years":
+      res.send("Four years");
+    case "Referrer":
+      res.send("Jenny");
+    case "Degree":
+      res.send("B.A. Computer Science Yeshiva University");
+    case "Resume":
+      res.send("https://docs.google.com/document/d/1uSxYFH_uq1G19ISMAGlH13o56PMc5J33MjhSPBvVIrY/edit?usp=sharing");
+    case "Source":
+      res.send("Sent by email");
+    case "Status":
+      res.send("Yes");
     case "Puzzle":
       {
         let puzzle = req.query.d.split('\n');
@@ -22,8 +40,6 @@ app.get('/', function(req, res) {
 var port = process.env.PORT || 3000;
 app.listen(port);
 console.log('Listening on localhost:'+ port);
-
-
 
 
 function solution(puzzle) {

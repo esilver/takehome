@@ -1,6 +1,6 @@
 {
-  "name": "hello-world-express",
-  "description": "Hello World test app",
+  "name": "Take Home",
+  "description": "Take Home",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
