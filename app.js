@@ -3,13 +3,13 @@ var app = express();
 
 // Routes
 app.get('/', function(req, res) {
+  if (req.query.q == "Phone"){
+    res.send('9179249076');
+  }
   res.send('OK');
 });
 
-// Routes
-app.get('/fullname', function(req, res) {
-  res.send('Eli');
-});
+
 
 // Listen
 var port = process.env.PORT || 3000;
