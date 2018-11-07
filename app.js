@@ -22,7 +22,7 @@ app.get('/', function(req, res) {
     case "Resume":
       res.send("https://docs.google.com/document/d/1uSxYFH_uq1G19ISMAGlH13o56PMc5J33MjhSPBvVIrY/edit?usp=sharing");
     case "Source":
-      res.send("Sent by email");
+      res.send("https://github.com/esilver/takehome");
     case "Status":
       res.send("Yes");
     case "Puzzle":
