@@ -43,10 +43,10 @@ function solution(puzzle) {
 
 
   let solution = " ABCD\n"
-  + solutionValue(0, arr, equalIndex) + '\n'
-  + solutionValue(1, arr, equalIndex) + '\n'
-  + solutionValue(2, arr, equalIndex) + '\n'
-  + solutionValue(3, arr, equalIndex)
+  + 'A' + solutionValue(0, arr, equalIndex) + '\n'
+  + 'B' + solutionValue(1, arr, equalIndex) + '\n'
+  + 'C' + solutionValue(2, arr, equalIndex) + '\n'
+  + 'D' + solutionValue(3, arr, equalIndex)
 
   return solution;
 }
