@@ -20,6 +20,7 @@ app.get('/', function(req, res) {
   if (req.query.q == "Ping"){
     res.send('OK');
   }
+  res.send('OK');
 });
 
 
