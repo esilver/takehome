@@ -10,14 +10,13 @@ app.get('/', function(req, res) {
   }
   if (req.query.q == "Puzzle"){
     res.send(' ABCD\n'
-    +'A=>>>\n'
-    +'B<=<<\n'
-    +'C<>=>\n'
-    +'D<><=');
+    +'A=<><\n'
+    +'B>=><\n'
+    +'C<<=<\n'
+    +'D>>>=');
   }
   res.send('OK');
 });
-
 
 
 // Listen
