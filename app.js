@@ -9,11 +9,14 @@ app.get('/', function(req, res) {
     res.send('9179249076');
   }
   if (req.query.q == "Puzzle"){
-    res.send(' ABCD\n'
-    +'A=<><\n'
-    +'B>=><\n'
-    +'C<<=<\n'
-    +'D>>>=');
+    let puzzle = req.query.d.split('\n');
+    let equalPosition;
+    let a = puzzle[2];
+    let b = puzzle[3];
+    let c = puzzle[4];
+    let d = puzzle[5];
+    res.send(a+b+c+d);
+    
   }
   res.send('OK');
 });
