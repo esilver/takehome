@@ -78,15 +78,15 @@ function solutionValue(index, arr, equalIndex){
     } else if (arr[index][1] === '<'){
       result += '<';
     } else if (arr[index][1] === '>') {
-      if(arr[index][0] !== equalIndex){
-        result += '>';
-      } else {
-        if (i === equalIndex) {
-          result += arr[index][1];
+        if(arr[index][0] !== equalIndex){
+            result += '>';
         } else {
-          result += (arr[i][1] === '<') ? '>' : '<'; 
+            if (i === equalIndex) {
+                result += '>';
+            } else {
+                result += (arr[i][1] === '<') ? '>' : '<'; 
+            }
         }
-      }
     } else if (arr[index][1] === '='){
       result += (arr[i][1] === '<') ? '>' : '<';
     }
